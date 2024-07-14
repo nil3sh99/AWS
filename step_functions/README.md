@@ -4,7 +4,7 @@ Step Functions is a serverless orchestration service that lets you easily coordi
 
 ## Pre-requisite to create Step Function?
 
-You should have a custom IAM role that you can assign to your StepFunctions. 
+You should have a custom IAM role that you can assign to your StepFunctions.
 
 If you want to use Lambdas, then you should have an IAM role that allows Step Functions to access Lambda.
 
@@ -12,7 +12,7 @@ If you want to use Lambdas, then you should have an IAM role that allows Step Fu
 
 "States": An object containing a comma-delimited set of states.
 
-Example: 
+Example:
 
 {
 
@@ -88,6 +88,24 @@ Example:
 
     },
 
-Options for State: Choice, Fail, Task
+Options for State: Choice, Fail, Task, Pass
 
 ![1720968477541](image/README/1720968477541.png)
+
+# What is a Lambda Function?
+
+AWS Lambda is a compute service that lets you run code without provisioning or managing servers.
+
+## Pre-requisite to create a Lambda Function
+
+When creating a Lambda Function, you will be asked three options.
+
+1. Create from Scratch
+2. Create from Template
+3. Create from Container Image
+
+Also, you will be allowed to select a programming language (Node.js, Python), along with the architecutre on which your lambda would run (arc86, or arm64)
+
+Furthermore, you need an IAM execution role: Choose a role that defines the permissions of your function.
+
+Default setting: Lambda will create an execution role named MockAPIFunction-role-xxx, with permission to upload logs to Amazon CloudWatch Logs.
