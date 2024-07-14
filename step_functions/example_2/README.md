@@ -38,6 +38,19 @@ In this step, you will use the Step Functions console to create a state machine 
 
 To see the State machine code, check the state_machine.py file in this directory.
 
+Important concepts used in the state_machine.py
+
+Component of a task::
+
+"Retry": An array of objects, called Retriers, that define a retry policy if the state encounters runtime errors.
+
+"Catch": An array of objects, called Catchers, that define a fallback state. This state is executed if the state encounters runtime errors and its retry policy is exhausted or isn't defined.
+
+Task type::Wait
+
+"Wait and Try Later": A Wait state delays the state machine from continuing for a specified time. You can choose either a relative time, specified in seconds from when the state begins, or an absolute end time, specified as a timestamp.
+
+
 
 Step 4: Execution
 

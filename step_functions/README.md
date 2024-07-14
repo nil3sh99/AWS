@@ -88,7 +88,7 @@ Example:
 
     },
 
-Options for State: Choice, Fail, Task, Pass
+Options for State: Choice, Fail, Task, Pass, Wait
 
 ![1720968477541](image/README/1720968477541.png)
 
