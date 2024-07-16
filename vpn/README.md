@@ -83,3 +83,27 @@ Just make sure that the subnet that you are selecting is not overlapping with th
 Client CIDR needs a minimum of 22 and a maximum of 12 netmask.
 
 For example: Create the client CIDR as 10.0.32.0/22 and the Target VPC subnet CIDR as 10.0.0.0/26.
+
+
+Step 4:
+
+For clients to access the VPC, there needs to be a route to the VPC in the Client VPN endpoint's route table and an authorization rule. The route was already added automatically in the previous step. For this tutorial, we want to grant all users access to the VPC.
+
+
+Step 5: 
+
+You can provide access to additional networks connected to the VPC, such as AWS services, peered VPCs, on-premises networks, and the internet. For each additional network, you add a route to the network in the Client VPN endpoint's route table and configure an authorization rule to give clients access.
+
+For this tutorial, we want to grant all users access to the internet and also to the VPC. You've already configured access to the VPC, so this step is for access to the internet.
+
+
+Step 6: Verify security group requirements
+
+In this tutorial, no security groups were specified during the creation of the Client VPN endpoint in Step 2. That means that the default security group for the VPC is automatically applied to the Client VPN endpoint when a target network is associated. As a result, the default security group for the VPC should now be associated with the Client VPN endpoint.
+
+
+Step 7: Download the Client VPN endpoint configuration file
+
+The next step is to download and prepare the Client VPN endpoint configuration file. The configuration file includes the Client VPN endpoint details and certificate information required to establish a VPN connection. You provide this file to the end users who need to connect to the Client VPN endpoint. The end user uses the file to configure their VPN client application.
+
+Distribute the Client VPN endpoint configuration file to your end users by changing the certificate key value in the download Client VPN endpoint configuration file.
